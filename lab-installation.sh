@@ -23,7 +23,8 @@ vagrant plugin install vagrant-hosts
 vagrant plugin install vagrant-cachier
 
 echo "################ Getting ssh key ready and waiting for put it into vagrant@control-node ~ ################"
-mkdir .ssh
-ssh-keygen -b 2048 -t rsa -f .ssh/id_rsa -q -N ""
+rm -rf ssh
+mkdir ssh
+ssh-keygen -b 2048 -t rsa -f ssh/id_rsa -q -N ""
 rm -rf ../vagrant_2.2.10_x86_64.rpm
 rm -rf ../lab.zip
