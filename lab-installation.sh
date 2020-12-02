@@ -1,9 +1,9 @@
 #!/bin/bash
 
 
-red=`tput setaf 1`
-green=`tput setaf 2`
-reset=`tput sgr0`
+red='tput setaf 1'
+green='tput setaf 2'
+reset='tput sgr0'
 
 
 echo "${green}Enabling EPEL Repository${reset}"
@@ -20,7 +20,7 @@ sudo yum localinstall vagrant_2.2.10_x86_64.rpm -y
 echo "${green}Intsalling vagrant plugins ~${reset}"
 wget -O lab.zip "https://onedrive.live.com/download?cid=38AC19F33806C642&resid=38AC19F33806C642%217398&authkey=AKhI3TzsB4hEGT8"
 unzip lab.zip
-Rm -rf __MACOSX
+rm -rf __MACOSX
 cd lab
 vagrant plugin install vagrant-hosts
 vagrant plugin install vagrant-cachier
